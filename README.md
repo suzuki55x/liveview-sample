@@ -27,7 +27,7 @@ mix ecto.create
 iex -S mix phx.server
 ```
 
-## 認証機能のため、phx_gen_authを追加
+### 認証機能のため、phx_gen_authを追加
 
 `mix.exs`のdepsに追記
 
