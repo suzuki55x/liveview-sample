@@ -1,20 +1,28 @@
 # LiveviewSample
 
-To start your Phoenix server:
+Phoenix LiveView を試してみる。  
 
-  * Install dependencies with `mix deps.get`
-  * Create and migrate your database with `mix ecto.setup`
-  * Install Node.js dependencies with `npm install` inside the `assets` directory
-  * Start Phoenix endpoint with `mix phx.server`
+ROG Strix Scar 15 (2021) の環境構築テストもかねてWindows環境。
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+## 前提
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
+- Elixir v1.11.3
+- Phoenix v1.5.7
+- PostgreSQL v13.2-1
 
-## Learn more
+## やったこと
 
-  * Official website: https://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Forum: https://elixirforum.com/c/phoenix-forum
-  * Source: https://github.com/phoenixframework/phoenix
+### プロジェクト作成
+
+```shell
+mix phx.new liveview_sample --live
+```
+
+DB初期化 & 動作確認  
+(PostgreSQL起動していることを確認)
+
+```shell
+cd liveview_sample
+mix ecto.create
+iex -S mix phx.server
+```
