@@ -38,3 +38,24 @@ iex -S mix phx.server
 ```shell
 mix do deps.get, deps.compile
 ```
+
+認証機能とユーザテーブルの追加
+
+```shell
+mix phx.gen.auth Users User users
+mix ecto.migrate
+```
+
+phx.gen.authの引数
+
+> Users-> Context CRUDのSQL的処理やSQLクエリを記述  
+> User -> schema  データ構造やリレーション、バリデーションなど作成・変更時の処理を記述  
+> users -> DBのテーブル名
+
+サーバを再起動
+
+```shell
+iex -S mix phx.server
+```
+
+`localhost:4000`にアクセスして、右上に登録・ログインが追加されていることを確認
