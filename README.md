@@ -26,3 +26,15 @@ cd liveview_sample
 mix ecto.create
 iex -S mix phx.server
 ```
+
+## 認証機能のため、phx_gen_authを追加
+
+`mix.exs`のdepsに追記
+
+```elixir
+{:phx_gen_auth, "~> 0.5", only: [:dev], runtime: false}
+```
+
+```shell
+mix do deps.get, deps.compile
+```
